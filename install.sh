@@ -22,6 +22,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 EOF
 
+echo "# Security: Disable the verify command" >> /etc/postfix/main.cf 
+echo "disable_vrfy_command = yes" >> /etc/postfix/main.cf
+
 # Only if nothing has been setup
 if [ ! -f /etc/motd.tail ]; then 
 
