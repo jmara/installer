@@ -15,6 +15,8 @@ echo "Change Apache Security"
 
 sed -i "s/^ServerTokens OS$/ServerTokens Prod/" /etc/apache2/conf.d/security
 sed -i "s/^ServerSignature On$/ServerSignature Off/" /etc/apache2/conf.d/security
+echo "UseCanonicalName On" >> /etc/apache2/conf.d/security
+
 
 echo "Change DefaultCharset to UTF8"
 
